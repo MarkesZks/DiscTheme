@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Nunito:wght@600;700;800&display=swap');  
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 /* css */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:'Lexend Deca' ;
 }
 a{ 
     text-decoration:none ;
@@ -14,7 +15,7 @@ a{
 .wrapper{
     width: 90%;
     /* largura */
-    max-width: 1440px;
+    max-width: 1240px;
     /* largura maxima */
     margin: 0 auto;
     /* centralizar */
@@ -30,14 +31,14 @@ main {
 }
 
 #header {
-    padding: 30px;
+    padding: 25px;
     background-color: rgb(0, 0, 0);  
   }
 
   #icon_head {
-    margin-right: 25px;
+    margin-right: 18px;
     color:white;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #logo{
@@ -54,11 +55,18 @@ margin: 110px 00px;
 
 #secao_inicial{
     padding: 15px;
-    background:#6B1BE3;
+    background-color: #000000;
+    background-image: url(img/bg.svg) ;
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: unset;
+
 }
 
 #secao_artigos {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 #links_secoes{
@@ -81,16 +89,26 @@ margin: 110px 00px;
 
 #conteudo_principal>h1{
     
-    font-family: 'Lexend Deca';
-    font-weight: 800px;
-    margin: 10px 0px;
-    font-size: 72px;
-    color: #fff;
-
+    font-family: 'Courier Prime', monospace;
+    font-weight: 800;
+    margin-top: 150px;
+    font-size: 74px;
+    color: rgb(255, 255, 255);
 }
+#conteudo_principal>h1::after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+@keyframes pisca {
+    0%,100% {opacity: 1;}
+    50%{opacity: 0;}
+}
+
 #conteudo_principal>P{
     font-size: 20px;
-    font-family: 'Nunito';
+    font-family: 'Courier Prime', monospace;
     color: white;
     margin-top: 20px;
     margin-bottom: 55px;
@@ -99,11 +117,13 @@ margin: 110px 00px;
 #conteudo_principal>a{
     font-size: 20px;
     font-family: 'Nunito';
-    font-weight: 800;
+    font-weight: 500;
     color: rgb(0, 0, 0);
     background-color: white;
-    border-radius: 15px;
-    padding: 12px 15px;
+    border-radius: 10px;
+    padding: 12px 35px;
+
+    
 }
 #conteudo_principal>a:hover{
     opacity:70% ;
@@ -201,11 +221,25 @@ margin: 15px 0px;
 }
 
 .explicacao > h2 {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito';
     font-size: 40px;
 }
 #theme_btn{
     text-align: center;
+}
+.btncolor{
+    padding: 10px 15px;
+    margin: 15px;
+    font-size: 18px;
+    font-family: 'Nunito';
+    color: #000000;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.btncolor:hover{
+    background-color: #c51be3;
+    opacity: 90%;
+    cursor: pointer;
 }
 
 footer {
