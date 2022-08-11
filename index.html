@@ -29,13 +29,14 @@
     <main>
         <section id="secao_inicial">
             <div class="wrapper flex">
-                <!-- wdapper- embrulho -->
+                
                 <div id="conteudo_principal">
                     <h1>Disc Theme</h1>
                     <p id="writer-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis nisi sunt similique, cumque
                         dolorum impedit recusandae labore facilis laboriosam!</p>
-                    <a href="#">BAIXE AQUI</a>
+                    <button href="#"> <img src="img/724933.png"> BAIXE AQUI</button>
                 </div>
+                <img id="Icon_principal" src="img/discord-logo-icone.png"></img>
               
             </div>
             
@@ -90,6 +91,17 @@
     </footer>
     <script src="./script.js"></script>
     <script src="writer.js"></script>
+    <script type="text/javascript" src="rotacao.js"></script>
+
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector("#Icon_principal"), {
+            max: 25,
+            speed: 400
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll("#Icon_principal"));
+    </script>
 </body>
 
 </html>
